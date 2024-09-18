@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  height:250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 80%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+img {
+  opacity: 0.7;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+body {
+  background-color: yellow;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+{% load static %}
+<body>
+<h1><center>Welcome to vj_cars</center></h1>
+<ul>
+  <li><a class="active" href="#home">vj_Cars</a></li>
+  <li><a href="news">News</a></li>
+  <li><a href="contact">Contact</a></li>
+  <li style="float:right"><a href="logout">LOG OUT</a></li>
+</ul>
+<div class="gallery">
+  <a target="_self" href="honda">
+    <img src="{% static 'h.jpg' %}" alt="HONDA" width="600" height="400">
+  </a>
+  <div class="desc">HONDA</div>
+</div>
+
+<div class="gallery">
+  <a target="_self" href="hyundai">
+    <img src="{% static 'hyu.jpg' %}" alt="HYUNDAI" width="600" height="40">
+  </a>
+  <div class="desc">HYUNDAI</div>
+</div>
+
+<div class="gallery">
+  <a target="_self" href="maruti">
+    <img src="{% static 'ms.jpg' %}" alt="MARUTI" width="600" height="400">
+  </a>
+  <div class="desc">MARUTI SUZUKI</div>
+</div>
+
+<div class="gallery">
+  <a target="_self" href="toyota">
+    <img src="{% static 't.jpg' %}" alt="TOYOTA" width="600" height="400">
+  </a>
+  <div class="desc">TOYOTA</div>
+</div>
+</body>
+</html>

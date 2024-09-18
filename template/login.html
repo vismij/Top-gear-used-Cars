@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+div {
+  width: 300px;
+  border: 15px outset yellow;
+  box-shadow: 10px 10px 5px lightyellow;
+  padding: 50px;
+  margin: 20px;
+}
+td.div1 {
+padding-top:20px;
+padding-left: 100px;
+}
+    html {
+  background: url("/static/v j1.jpeg") no-repeat center fixed;
+  background-size: cover;
+}
+    </style>
+    <meta charset="UTF-8">
+    <title>Log in page </title>
+</head>
+{% load static %}
+<body>
+<center>
+<div>
+    <table align="center">
+<form method="post" action="login">
+    {% csrf_token %}
+    <tr>
+   <td> <label>User Name</label></td>
+    <td> <input type="text" name="username" id="user"></td>
+        </tr>
+    <td></td>
+    <tr>
+   <td> <label>Password</label></td>
+    <td><input type="password" name="password" id="pas"><br></td>
+        </tr>
+    <tr>
+        <td></td>
+<!--   <td class="div1"> <input type="submit" value="LOG IN"></td>-->
+        <td class="div1"><button onclick="myFunction()">LOG IN</button></td>
+<script>
+function myFunction() {
+ var a=document.getElementById("user").value;
+ var b=document.getElementById("pas").value;
+    if (a==""){
+  alert("Enter User name:");
+  }
+  else if (b==""){
+  alert("Enter Password: ");
+  }
+}
+</script>
+    </tr>
+</form>
+        </table>
+    </div>
+    </center>
+<script>
+    var a=document.getElementById("user").value;
+    if (a=="")
+    {alert("Enter User name"}
+</script>
+</body>
+</html>

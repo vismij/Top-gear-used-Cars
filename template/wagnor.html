@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+       <style>
+div.gallery {
+  margin: 10px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+  height: 250px
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 100%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+body {
+  background-color: lightblue;
+}
+</style>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+{% load static %}
+<body>
+<ul>
+  <li><a class="active" href="#home">vj_Cars</a></li>
+  <li><a href="news">News</a></li>
+  <li><a href="contact">Contact</a></li>
+  <li style="float:right"><a href="logout">LOG OUT</a></li>
+</ul>
+<div class="gallery">
+<!--  <a target="_blank" href="h">-->
+    <img src="{% static 'mw1.jpg' %}" alt="Cinque Terre" width="600" height="400">
+<!--  </a>-->
+<!--  <div class="desc">Hondajazz</div>-->
+</div>
+
+<div class="gallery">
+<!--  <a target="_blank" href="vj.jpg">-->
+    <img src="{% static 'mw2.jpg' %}" alt="Forest" width="600" height="400">
+  </a>
+<!--  <div class="desc">Add a description of the image here</div>-->
+</div>
+
+<div class="gallery">
+<!--  <a target="_blank" href="ritz">-->
+    <img src="{% static 'mw3.jpg' %}" alt="Northern Lights" width="600" height="400">
+  </a>
+<!--  <div class="desc">Add a description of the image here</div>-->
+</div>
+
+<div class="gallery">
+    <img src="{% static 'mw4.jpg' %}" alt="Mountains" width="600" height="400">
+  </a>
+<!--  <div class="desc">Add a description of the image here</div>-->
+</div>
+<h1>WAGNOR</h1>
+<h2>Description:</h2>
+<h3>ADDITIONAL VEHICLE INFORMATION:</h3>
+<p>
+    Model : 2019<br>
+    Price : 7.5L<br>
+Ownership : Second<br>
+Location : Kozhikode<br>
+    Fuel : Petrol<br>
+    Registration Place : KL<br>
+    ****************
+</p>
+<p>For taking a test drive </p>
+<!--<a href="">BOOK NOW</a>-->
+        <button onclick="myFunction()">BOOK NOW</button>
+<script>
+function myFunction() {
+  alert("Your Booking has confirmed.\n \n Our Agent will contact you as soon as possible");
+}
+</script>
+</body>
+</html>
